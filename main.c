@@ -2,16 +2,24 @@
 
 int main()
 {
-    int sirina, visina;
-    printf("Unesite širinu: ");
-    scanf("%d", &sirina);
-    printf("\nUnesite visinu: ");
-    scanf("%d", &visina);
-    printf("\n");
 
-    printf("Površina pravougaonika je: %d\n", (sirina * visina));
-    printf("Obim pravougaonika je: %d\n", (2 * (sirina + visina)));
-    printf("\n");
-    
+    char slovo;
+
+    do
+    {
+        printf("#######################");
+        printf("\n Unesite jedno slovo: ");
+        scanf("%c", &slovo);
+        getchar();
+        
+        if (slovo != 'k')
+        {
+            printf("Niste uspjeli pogoditi slovo, pokšajte ponovo.\n");
+            }
+        else
+        {
+            printf("Bravo, uspjeli ste pogoditi tajno slovo.\n");
+        }
+    } while (slovo != 'k');
     return 0;
 }
