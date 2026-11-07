@@ -2,22 +2,58 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Build",
+            "label": "Build aktivni fajl",
             "type": "shell",
-            "command": "make",
+            "command": "'${workspaceFolder}/build.sh' '${file}'",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
             "group": {
                 "kind": "build",
                 "isDefault": false
             },
             "problemMatcher": [
                 "$gcc"
-            ]
+            ],
+            "presentation": {
+                "reveal": "silent",
+                "panel": "shared",
+                "clear": true
+            },
+            "detail": "clang -Wall -Wextra -std=c11 -g (+ pomocni .c fajlovi iz istog foldera)"
         },
         {
-            "label": "Run",
+            "label": "Pokreni aktivni fajl",
             "type": "shell",
-            "command": "make run",
-            "dependsOn": "Build",
+            "command": "'${workspaceFolder}/build.sh' '${file}' --run",
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated",
+                "clear": true,
+                "focus": true
+            },
+            "detail": "Kompajlira i odmah pokrene program (Code::Blocks stil)"
+        },
+        {
+            "label": "Build (make)",
+            "type": "shell",
+            "command": "make",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Koristi Makefile u rootu (trazi main.c)"
+        },
+        {
+            "label": "Ocisti program",
+            "type": "shell",
+            "command": "rm -f '${fileDirname}/program' && rm -rf '${fileDirname}/program.dSYM'",
             "problemMatcher": []
         },
         {
@@ -30,7 +66,10 @@
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
+                "${fileDirname}/${fileBasenameNoExtension}",
+                "-Wall",
+                "-Wextra",
+                "-std=c11"
             ],
             "options": {
                 "cwd": "${fileDirname}"

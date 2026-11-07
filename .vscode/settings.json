@@ -1,1 +1,8 @@
-{}
+{
+  "files.associations": {
+    "*.h": "c"
+  },
+  "C_Cpp.default.cStandard": "c11",
+  "C_Cpp.default.compilerPath": "/usr/bin/clang",
+  "C_Cpp.default.intelliSenseMode": "macos-clang-arm64"
+}

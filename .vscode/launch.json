@@ -2,17 +2,14 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Debug (lldb)",
-      "type": "cppdbg",
+      "name": "Debug aktivni fajl (lldb)",
+      "type": "lldb",
       "request": "launch",
-      "program": "${workspaceFolder}/program",
+      "program": "${fileDirname}/program",
       "args": [],
-      "stopAtEntry": false,
-      "cwd": "${workspaceFolder}",
-      "environment": [],
-      "externalConsole": false,
-      "MIMode": "lldb",
-      "preLaunchTask": "Build"
+      "cwd": "${fileDirname}",
+      "terminal": "integrated",
+      "preLaunchTask": "Build aktivni fajl"
     }
   ]
 }

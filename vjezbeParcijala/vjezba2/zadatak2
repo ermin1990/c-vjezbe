@@ -1,0 +1,40 @@
+/*
+Napraviti matricu proizvoljne velčine.
+Matrica se sadrži od mina, praznih polja i tenkova
+Mine obilježimo sa M, prazno polje * i tenk T
+
+Ispisati korisniku mapu gdje je sve zatvoreno *
+
+Korisnik bira koje polje želi da otkrije, ukoliko naleti na minu, broj života -1
+Ukoliko naleti na Tenk uništava Tenk.
+Cilje je da uništi sve tenkove.
+*/
+
+#include <stdio.h>
+
+int main()
+{
+
+    char Tenk = 'T';
+    char Mina = 'M';
+    char Polje = '*';
+
+    int red;
+    int kol;
+
+
+
+    
+        printf("Unesi redove: ");
+        scanf("%d", &red)
+        printf("\nUnesi kolone: ");
+        scanf("%d", &kol)
+        
+        charpolje[red][kol];
+
+        //Polja za igru
+
+        int 
+
+
+}
