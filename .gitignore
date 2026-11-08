@@ -1,0 +1,20 @@
+# Kompajlirani programi (izvršni fajlovi bez ekstenzije)
+program
+/main
+zadatak1
+zadatak2
+
+# macOS debug folderi koje pravi clang
+*.dSYM/
+
+# Međufajlovi kompajlera
+*.o
+*.obj
+*.out
+*.exe
+*.a
+*.so
+*.dylib
+
+# macOS
+.DS_Store

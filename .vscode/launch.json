@@ -8,7 +8,7 @@
       "program": "${fileDirname}/program",
       "args": [],
       "cwd": "${fileDirname}",
-      "terminal": "integrated",
+      "terminal": "external",
       "preLaunchTask": "Build aktivni fajl"
     }
   ]
