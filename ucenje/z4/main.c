@@ -34,8 +34,6 @@ void maxNum(int brojevi[], int brojUnosa){
     printf("\nNajveći broj je %d\n", broj);
 }
 
-
-
 int main()
 {
 
